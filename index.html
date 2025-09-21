@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Rush</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars-container">
+        <div class="sparkle" style="top: 8%; left: 5%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="top: 15%; left: 20%; animation-delay: 0.8s;"></div>
+        <div class="sparkle" style="top: 12%; left: 35%; animation-delay: 1.6s;"></div>
+        <div class="sparkle" style="top: 18%; left: 50%; animation-delay: 2.4s;"></div>
+        <div class="sparkle" style="top: 10%; left: 65%; animation-delay: 3.2s;"></div>
+        <div class="sparkle" style="top: 16%; left: 80%; animation-delay: 4s;"></div>
+        <div class="sparkle" style="top: 14%; left: 95%; animation-delay: 4.8s;"></div>
+        
+        <div class="sparkle" style="top: 25%; left: 8%; animation-delay: 0.4s;"></div>
+        <div class="sparkle" style="top: 32%; left: 25%; animation-delay: 1.2s;"></div>
+        <div class="sparkle" style="top: 28%; left: 42%; animation-delay: 2s;"></div>
+        <div class="sparkle" style="top: 35%; left: 58%; animation-delay: 2.8s;"></div>
+        <div class="sparkle" style="top: 30%; left: 75%; animation-delay: 3.6s;"></div>
+        <div class="sparkle" style="top: 38%; left: 90%; animation-delay: 4.4s;"></div>
+        
+        <div class="sparkle" style="top: 48%; left: 3%; animation-delay: 0.6s;"></div>
+        <div class="sparkle" style="top: 52%; left: 15%; animation-delay: 1.4s;"></div>
+        <div class="sparkle" style="top: 55%; left: 85%; animation-delay: 2.2s;"></div>
+        <div class="sparkle" style="top: 50%; left: 97%; animation-delay: 3s;"></div>
+        
+        <div class="sparkle" style="top: 62%; left: 7%; animation-delay: 0.2s;"></div>
+        <div class="sparkle" style="top: 68%; left: 22%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="top: 65%; left: 78%; animation-delay: 1.8s;"></div>
+        <div class="sparkle" style="top: 70%; left: 93%; animation-delay: 2.6s;"></div>
+    </div>
+
+    <div class="container">
+        <div class="main-screen">            
+            <button class="get-signal-btn" onclick="openGame()">
+                <span id="mainButtonText">Получить сигнал</span>
+            </button>
+        </div>
+
+        <div class="game-modal" id="gameModal">
+            <div class="game-content">
+                <button class="close-btn" onclick="closeGame()">&times;</button>
+                
+                <div class="game-title">
+                    <img src="assets/logo.webp" alt="Tower Rush Logo" class="game-logo">
+                    <h2>TOWER RUSH</h2>
+                </div>
+
+                <div class="game-status" id="gameStatusFrame">
+                    <div class="status-dot"></div>
+                    <span id="gameStatus">ON --- Place 6 blocks in a row</span>
+                </div>
+
+                <div class="level-display">
+                    <div class="level-number" id="levelNumber">3</div>
+                    <div class="level-text" id="levelText">How many blocks to place in a row</div>
+                </div>
+
+                <button class="get-signal-btn modal-btn" onclick="generateNewLevel()">
+                    <span id="modalButtonText">Получить сигнал</span>
+                </button>
+
+                <div class="progress-info">
+                    <span id="progressText">If you have already made more than 2.5 of the bet, take your winnings! Even if you don't guess to place more blocks.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
